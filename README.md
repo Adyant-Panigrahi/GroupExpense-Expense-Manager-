@@ -15,7 +15,8 @@ GroupExpense is a straightforward web app designed to help roommates, friends, a
 - [Success Metrics](#success-metrics)
 - [Tech Stack](#tech-stack)
 - [Project Structure](#project-structure)
-- [Getting Started](#getting-started)  
+- [Getting Started](#getting-started)
+- [MoSCoW](#MoSCoW)
 
 ---
 
@@ -78,6 +79,16 @@ He handles reimbursements for events. He needs transparency so he can show the s
 - **Database**: PostgreSQL (Prisma ORM)
 - **DevOps**: Docker & Docker Compose
 - **Version Control**: Git
+
+## MoSCoW
+| Priority    | User Stories                        | Count |
+| ----------- | ----------------------------------- | ----- |
+| MUST HAVE   | US-01,02,03,04,05,08,09,10,11,16,17 | 11    |
+| SHOULD HAVE | US-06,07,13,14,15,18                | 6     |
+| COULD HAVE  | US-12,19,20,21,22,23,24             | 7     |
+| WON'T HAVE  | US-25                               | 1     |
+
+
 
 ## Project Structure
 
