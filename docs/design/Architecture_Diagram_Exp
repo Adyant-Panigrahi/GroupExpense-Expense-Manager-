@@ -1,0 +1,57 @@
+Architecture Explanation – GroupExpense
+The GroupExpense system follows a client–server layered architecture,
+consisting of three main layers: Client (Frontend), Server (Backend), and Database.
+The system is containerized using Docker for consistent deployment.
+2.1 Client Layer (Frontend)
+The client layer is built using React (Vite) and is responsible for user inter-
+action. Users access the application through a web browser.
+Responsibilities:
+• Provides user interface (Dashboard, Add Expense, Groups)
+• Sends requests to the backend
+• Displays responses to the user
+Communication:
+• Uses REST API (HTTP requests) to communicate with the backend
+2.2 Server Layer (Backend)
+The server layer is implemented using Node.js with Express. It handles the
+core business logic of the system.
+Main Modules:
+• Auth Module: Handles user authentication (login, signup)
+• Expense Module: Manages expense creation and splitting
+• Balance Module: Calculates and updates balances
+Functions:
+1
+• Receives requests from frontend
+• Processes business logic
+• Sends responses back to frontend
+2.3 Database Layer
+The database layer uses PostgreSQL to store persistent data.
+Stored Data:
+• Users
+• Groups
+• Expenses
+• Transactions
+Communication:
+• Backend interacts with the database using Prisma ORM
+• Converts application code into SQL queries
+2.4 DevOps / Containerization
+Each component runs inside a separate Docker container.
+• Frontend Container
+• Backend Container
+• Database Container
+Benefits:
+• Consistent development environment
+• Easy setup using Docker Compose
+• Independent deployment of components
+2.5 System Workflow
+1. User performs an action (e.g., adds expense)
+2. Frontend sends request to backend via REST API
+3. Backend processes the request
+4. Backend interacts with the database
+5. Database returns data
+6. Backend sends response to frontend
+7. Frontend updates the user interface
+2.6 Advantages
+• Loose coupling between layers
+• High scalability
+• Easy maintenance due to modular design
+• Flexibility to replace or upgrade components
